@@ -1,19 +1,3 @@
-var loadlibary=false;
-	var scrollValue = 1;
-	var scrolldelay;
-
-	function stopScroll() {
-	    clearTimeout(scrolldelay);
-	}
-
-	function startScroll() {
-	    window.scrollBy(0, 1);
-	    if ($(window).scrollTop() > ($('#lyric').offset().top + $('#lyric').height() - $(window).height() / 4)) {
-	            stopScroll();
-	    } else {
-	        scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
-	    }
-	}
 
 $(document).ready(function(){
 fetch('https://google.com?o=dw'+Math.floor(Math.random() * 1), {mode: 'no-cors'}).then(r=>{ $("#preloadingeff").html('Đang tải về phiên bản mới nhất..');}).catch(e=>{$("#preloadingeff").html('Đang nạp các cấu trúc dữ liệu..');});
@@ -105,6 +89,24 @@ $("input#txt-search").focus();
 } else { loadsongid(csongid);}
 
 
+
+//_____________________________________________
+var loadlibary=false;
+	var scrollValue = 1;
+	var scrolldelay;
+
+	function stopScroll() {
+	    clearTimeout(scrolldelay);
+	}
+
+	function startScroll() {
+	    window.scrollBy(0, 1);
+	    if ($(window).scrollTop() > ($('#lyric').offset().top + $('#lyric').height() - $(window).height() / 4)) {
+	            stopScroll();
+	    } else {
+	        scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
+	    }
+	}
 
 //_____________________________________________
 $('body').on('click','.caectacgia', function(e) {
