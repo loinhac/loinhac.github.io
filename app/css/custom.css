@@ -89,4 +89,9 @@ width: 60% !important;
 .difjv .input-group-append{
     width: 40% !important;
 }
+
+
+#toolbar{
+margin: 0 auto;
+display: block;
 }
