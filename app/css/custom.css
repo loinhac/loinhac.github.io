@@ -92,6 +92,6 @@ width: 60% !important;
 
 
 #toolbar{
-margin: 0 auto;
-display: block;
+margin: 0 auto !important;
+display: block !important;
 }
