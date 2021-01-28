@@ -8,6 +8,10 @@ html{position:relative;min-height:100%}body{margin-bottom:40px;background:#f1f4f
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+#toolbar{
+margin: 0 auto !important;
+display: block;
+}
 
 .nosemidlect {
 	font-size: 15px;
@@ -91,7 +95,3 @@ width: 60% !important;
 }
 
 
-#toolbar{
-margin: 0 auto !important;
-display: block !important;
-}
