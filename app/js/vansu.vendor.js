@@ -1,3 +1,4 @@
+var loadlibary=false;
 
 $(document).ready(function(){
 fetch('https://google.com?o=dw'+Math.floor(Math.random() * 1), {mode: 'no-cors'}).then(r=>{ $("#preloadingeff").html('Đang tải về phiên bản mới nhất..');}).catch(e=>{$("#preloadingeff").html('Đang nạp các cấu trúc dữ liệu..');});
@@ -90,8 +91,6 @@ $("input#txt-search").focus();
 
 
 
-//_____________________________________________
-var loadlibary=false;
 //_____________________________________________
 $('body').on('click','.caectacgia', function(e) {
 	$("#txt-loaitru").val(removeVietnameseTones($(this).text()));
