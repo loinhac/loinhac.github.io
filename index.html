@@ -33,8 +33,14 @@ if('serviceWorker' in navigator) {
   .catch(function() {
     console.log("Service worker registration failed")
   });
-}
+};
  
+
+
+
+ </script>
+
+ <script>
 	var scrollValue = 1;
 	var scrolldelay;
 
@@ -50,8 +56,6 @@ if('serviceWorker' in navigator) {
 	        scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
 	    }
 	}
-
-
  </script>
 <script src="/app/js/raphael.js"></script>
 <script src="/app/js/jtab.js"></script>
