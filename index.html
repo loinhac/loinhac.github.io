@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="always">
 <title>Thư viện hợp âm & Lời bài hát</title>
+<script src="/app/js/jquery.min.js"></script>
+
 <script defer type="text/javascript" data-dir="./app/" data-lifecycle="1" 
 data-css="bootstrap.min,all,bootstrap-editable,dataTables.bootstrap4.min,animate.min,custom" 
 data-js="popper.min,bootstrap.min,rules,vansu.vendor" 
@@ -30,8 +32,26 @@ if('serviceWorker' in navigator) {
   .catch(function() {
     console.log("Service worker registration failed")
   });
-}</script>
-<script src="/app/js/jquery.min.js"></script>
+}
+ 
+	var scrollValue = 1;
+	var scrolldelay;
+
+	function stopScroll() {
+	    clearTimeout(scrolldelay);
+	}
+
+	function startScroll() {
+	    window.scrollBy(0, 1);
+	    if ($(window).scrollTop() > ($('#lyric').offset().top + $('#lyric').height() - $(window).height() / 4)) {
+	            stopScroll();
+	    } else {
+	        scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
+	    }
+	}
+
+
+ </script>
 <script src="/app/js/raphael.js"></script>
 <script src="/app/js/jtab.js"></script>
   <!--
