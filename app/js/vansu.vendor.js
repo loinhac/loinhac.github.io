@@ -92,22 +92,6 @@ $("input#txt-search").focus();
 
 //_____________________________________________
 var loadlibary=false;
-	var scrollValue = 1;
-	var scrolldelay;
-
-	function stopScroll() {
-	    clearTimeout(scrolldelay);
-	}
-
-	function startScroll() {
-	    window.scrollBy(0, 1);
-	    if ($(window).scrollTop() > ($('#lyric').offset().top + $('#lyric').height() - $(window).height() / 4)) {
-	            stopScroll();
-	    } else {
-	        scrolldelay = setTimeout('startScroll()', 200 / scrollValue);
-	    }
-	}
-
 //_____________________________________________
 $('body').on('click','.caectacgia', function(e) {
 	$("#txt-loaitru").val(removeVietnameseTones($(this).text()));
