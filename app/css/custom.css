@@ -83,6 +83,10 @@ animation: hkbgsx 17s ease infinite;
 }
 h1.h3.tpodo{margin-top: 20px;}
 
-#txt-search{
+.difjv #txt-search{
 width: 60% !important;
+}
+.difjv .input-group-append{
+    width: 40% !important;
+}
 }
