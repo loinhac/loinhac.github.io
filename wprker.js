@@ -10,7 +10,6 @@
   '/app/css/dataTables.bootstrap4.min.css',
   '/app/css/animate.min.css',
   '/app/css/custom.css',
-  '/db.json',
   '/app/images/loadingg.gif',
   '/app/js/jquery.min.js',
   '/app/js/cache.js',
