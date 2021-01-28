@@ -15,6 +15,7 @@
   '/app/js/cache.js',
   '/app/js/popper.min.js',
   '/app/js/jtab.js',
+  '/app/js/lrephadr.js',
   '/app/js/vansu.vendor.js',
   '/app/webfonts/fa-solid-900.woff2',
   '/app/js/rules.js'
