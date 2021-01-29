@@ -20,15 +20,27 @@
   '/app/webfonts/fa-solid-900.woff2',
   '/app/js/rules.js'
 ];
- 
+ var curentVersion='loinhac_v7';
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('nhac')
+    caches.open(curentVersion)
       .then((cache) => {
         return cache.addAll(urlsToCache);
       })
   );
 });
+
+caches.keys().then(function (cachesNames) {
+
+for (i = 0; i < cachesNames.length; i++) {
+        if(cachesNames[i] !==curentVersion){
+            caches.delete(cachesNames[i])
+        }
+}
+
+})
+
 
 
 
@@ -39,7 +51,7 @@ self.addEventListener('fetch', (event) => {
 	}else{
 	
   event.respondWith(async function() {
-    const cache = await caches.open('nhac');
+    const cache = await caches.open(curentVersion);
     const cachedResponse = await cache.match(event.request, {ignoreSearch: true});
     const networkResponsePromise = fetch(event.request);
 
