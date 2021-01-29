@@ -7,5 +7,6 @@ Bản quyền ứng dụng thuộc về loinhac.github.io
 - Cơ sở dữ liệu được trích xuất từ [hopamviet.vn](https://hopamviet.vn)
 - Module headLoader từ @[baiyukey](https://github.com/baiyukey)
 
-####License
+#### License
+
 gpl-2.0
