@@ -175,7 +175,7 @@ $("h1.h3.centername,#lyric").removeClass('animated fadeIn thosename noselect');
 	if (searchField.length>2 || nosearchField.length>2){
 
 			if (antilag==false){
-			antilag=true;
+			antilag=false;
             var regex = new RegExp(searchField, "i");
             var rcgex = new RegExp(removeVietnameseTones(searchField), "i");
             var mestfc = new RegExp(removeVietnameseTones(nosearchField), "i");
