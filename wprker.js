@@ -1,7 +1,6 @@
 
 
 	importScripts('/app/js/cache.js');
-	var googleisthere = fetch('https://google.com', {mode: 'no-cors'}).then(r=>{return true;}).catch(e=>{return false;});
 	var urlsToCache = [
   '/index.html',
   '/app/css/bootstrap.min.css',
