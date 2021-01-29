@@ -151,7 +151,7 @@ $('body').on('keyup focusin','#txt-search,#txt-loaitru', function(e) {
 			clearTimeout(timeout);
 			timeout = setTimeout(function () {
 	
-			var $nowth = textInput_la.value;
+			var $nowth = $this;
 			window.history.pushState("", "", '?');
 			var searchField = textInput_a.value;
              var nosearchField = textInput_l.value;
