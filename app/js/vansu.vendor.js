@@ -142,9 +142,9 @@ $('body').on('click','.antonw', function(e) {
 })
 
 //_____________________________________________
-let textInput_l = document.getElementById('#txt-loaitru');
-let textInput_a = document.getElementById('#txt-search');
-let textInput_la = document.getElementById('#txt-search,#txt-loaitru');
+let textInput_l = document.querySelector('#txt-loaitru');
+let textInput_a = document.querySelector('#txt-search');
+let textInput_la = document.querySelector('#txt-search,#txt-loaitru');
 let timeout = null;
 $('body').on('keyup focusin','#txt-search,#txt-loaitru', function(e) {
 			$this=$(this);
