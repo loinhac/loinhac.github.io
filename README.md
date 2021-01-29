@@ -8,5 +8,5 @@ Bản quyền ứng dụng thuộc về loinhac.github.io
 - Module headLoader từ @[baiyukey](https://github.com/baiyukey)
 
 #### License
-
-gpl-2.0
+- [https://github.com/loinhac](https://github.com/loinhac)
+- [gpl-2.0](https://github.com/pascalandy/GNU-GENERAL-PUBLIC-LICENSE/blob/master/LICENSE.md)
