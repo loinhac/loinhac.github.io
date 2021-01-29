@@ -142,18 +142,26 @@ $('body').on('click','.antonw', function(e) {
 })
 
 //_____________________________________________
+let textInput_l = document.getElementById('#txt-loaitru');
+let textInput_a = document.getElementById('#txt-search');
+let textInput_la = document.getElementById('#txt-search,#txt-loaitru');
+let timeout = null;
 $('body').on('keyup focusin','#txt-search,#txt-loaitru', function(e) {
-			var $nowth = $(this);
+			$this=$(this);
+			clearTimeout(timeout);
+			timeout = setTimeout(function () {
+	
+			var $nowth = textInput_la.value;
 			window.history.pushState("", "", '?');
-			var searchField = $("#txt-search").val();
-             var nosearchField = $("#txt-loaitru").val();
+			var searchField = textInput_a.value;
+             var nosearchField = textInput_l.value;
       		if(nosearchField !=='' && searchField ==='') {$("#txt-search").val('');}
       		else if(searchField !=='' && nosearchField ==='') {$("#txt-loaitru").val('');}
       		else {
-      			var ccunoed=$(this).val();
+      			var ccunoed=textInput_la.value;
       			$("#txt-loaitru").val('');
       			$("#txt-search").val('');
-      			$(this).val(ccunoed);
+      			$this.val(ccunoed);
       		}
     
 if(searchField === '' && nosearchField === '')  {
@@ -228,7 +236,10 @@ $("h1.h3.centername,#lyric").removeClass('animated fadeIn thosename noselect');
 					}else{setTimeout(function(){  if(antilag==true) { antilag=false; $nowth.focus();var highestTimeoutId = setTimeout(";");for (var i = 0 ; i < highestTimeoutId ; i++) {clearTimeout(i); }}}, 200);}
 			    }
 			    
-			    
+			   }, 600);   
         });
+        
+        
+        
   });
         })
