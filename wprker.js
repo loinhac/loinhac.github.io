@@ -31,7 +31,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-caches.keys().then(function (cachesNames) {
+caches.keys().then(async function (cachesNames) {
 
 for (i = 0; i < cachesNames.length; i++) {
         if(cachesNames[i] !==curentVersion){
