@@ -20,7 +20,7 @@
   '/app/webfonts/fa-solid-900.woff2',
   '/app/js/rules.js'
 ];
- var curentVersion='loinhac_v7';
+ var curentVersion='loinhac_v9';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -36,6 +36,8 @@ caches.keys().then(function (cachesNames) {
 for (i = 0; i < cachesNames.length; i++) {
         if(cachesNames[i] !==curentVersion){
             caches.delete(cachesNames[i])
+	const dbs = await window.indexedDB.databases()
+	dbs.forEach(db => { window.indexedDB.deleteDatabase(db.name) })
         }
 }
 
