@@ -19,7 +19,7 @@
   '/app/webfonts/fa-solid-900.woff2',
   '/app/js/rules.js'
 ];
- var curentVersion='loinhac_v9';
+ var curentVersion='loinhac_v10';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
