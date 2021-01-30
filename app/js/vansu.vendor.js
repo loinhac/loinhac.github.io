@@ -226,6 +226,7 @@ $("h1.h3.centername,#lyric").removeClass('animated fadeIn thosename noselect');
 				var oiplivric=val.lyric.replace(/intro\:?(.+)\n/i,'');
 				oiplivric=oiplivric.replace(/Vòng\shợp\sâm\:?(.+)\n/i,'');
 				oiplivric=oiplivric.replace(/\n?(\<br\>)\n?/g,'');
+				oiplivric=oiplivric.replace(/(\<br\>\s?\<br\>)/g,'');
 				oiplivric=oiplivric.replace(/(\<br\>\n?\r?\<br\>)/g,'');
 				oiplivric=oiplivric.replace(/(\<br\>\n?\r?\s?\n?\r?\<br\>)/g,'<br>');
 				oiplivric=oiplivric.replace(/[\-]{1,8}/ig,'');
