@@ -119,7 +119,7 @@ function removeVietnameseTones(str) {
     // Remove punctuations
     // Bỏ dấu câu, kí tự đặc biệt
     str = str.replace(/!|@|%|\^|\*|\+|\=|\<|\>|\?|\/|,|\:|\;|\'|\"|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g," ");
-	conssole.log(str)
+	console.log(str)
     return str;
 }
 //_____________________________________________
