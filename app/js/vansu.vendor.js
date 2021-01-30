@@ -39,7 +39,10 @@ $("h1.centername").html(titlebegin);
 
 
 var datajson;
-$.getJSON("//adnhung.gq/nhac/db.json", function(json) {datajson=json;}).done(function() {
+var fileDB = localStorage.getItem('defaultDB')?localStorage.getItem('defaultDB'):localStorage.setItem('defaultDB','hav'),fileDB='hav';
+
+	
+$.getJSON("//adnhung.gq/nhac/"+fileDB+".json", function(json) {datajson=json;}).done(function() {
 loadlibary = true;
 
 
