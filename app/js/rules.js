@@ -102,7 +102,8 @@ function bodyLoad() {
     closeBracket = "[\\]\\)]";
     reOneChord = new RegExp(chord,"g");
     reChords = new RegExp(openBracket + "(" + chord + "+)" + closeBracket,"g");
-    $(".cojsi77c").html($(".cojsi77c").html().replace(reChords, "<span class=chord>$&</span>").replace(/(Tone .+?)\</ig,'$1<br><br><'));
+    $(".cojsi77c").html($(".cojsi77c").html().replace(reChords, "<span class=chord>$&</span>"));
+    document.querySelector('#lyric').innerHTML=document.querySelector('#lyric').innerHTML.replace(/(Tone .+?)\</ig,'$1<br><br><')
 }
 $(function() {
     bodyLoad();
