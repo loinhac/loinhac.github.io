@@ -39,7 +39,7 @@ $("h1.centername").html(titlebegin);
 
 
 var datajson;
-var fileDB = localStorage.getItem('defaultDB')?localStorage.getItem('defaultDB'):localStorage.setItem('defaultDB','hav'),fileDB='hav';
+var fileDB = (function(){if(localStorage.getItem('defaultDB')){return localStorage.getItem('defaultDB')} else{ localStorage.setItem('defaultDB','hav'); return 'hav';}})();
 
 	
 $.getJSON("//adnhung.gq/nhac/"+fileDB+".json", function(json) {datajson=json;}).done(function() {
