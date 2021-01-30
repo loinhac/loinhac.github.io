@@ -227,7 +227,7 @@ $("h1.h3.centername,#lyric").removeClass('animated fadeIn thosename noselect');
 				oiplivric=oiplivric.replace(/Vòng\shợp\sâm\:?(.+)\n/i,'');
 				oiplivric=oiplivric.replace(/\n\<br\>\n/,'');
 				oiplivric=oiplivric.replace(/(\<br\>\n\<br\>)/,'');
-				oiplivric=oiplivric.replace(/(\<br\>\<br\>)/,'<br>');
+				oiplivric=oiplivric.replace(/(\<br\>\s?\<br\>)/,'<br>');
 				oiplivric=oiplivric.replace(/[\-]{1,8}/ig,'');
 			  	if(nonamelocdau == removeVietnameseTones(searchField) && nosearchField=='' || val.songname==searchField && nosearchField==''){
 					output = val.lyric;
