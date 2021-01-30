@@ -98,7 +98,7 @@ function loadsongid(songcid){
 			  $('.btn-group.mr-1 .disabled').html(val.hopam);
 			  $('.ibar.mt-2.cojsi77c').attr('id',val.songid);
 			  $('.sngtc').html('Sáng tác: <span class="noselect caectacgia">'+val.tacgia+'</span>').removeClass('hiden').show();
-			  $('#lyric').html(val.lyric.replace(/(\<br\>\s?\<br\>)/g,''));
+			  $('#lyric').html(val.lyric.replace(/(\<br\>\s?\<br\>)/g,'<br>'));
 			  bodyLoad();
 			  $("[data-toggle='tooltip']").tooltip();
 			  window.scrollTo({ top: 0, behavior: 'smooth' });
